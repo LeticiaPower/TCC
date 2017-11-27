@@ -6,6 +6,7 @@ public class Telefone {
 	private Integer numeroTelefone;
 	private String tipoTelefone;
 	private DadosEmpresa dadosEmpresa;
+	
 	public Long getId() {
 		return id;
 	}
