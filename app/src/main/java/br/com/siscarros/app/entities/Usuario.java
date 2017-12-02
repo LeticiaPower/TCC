@@ -1,32 +1,45 @@
 package br.com.siscarros.app.entities;
 
-import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="tbl_usuario")
 public class Usuario {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String login;
 	private String senha;
 	private Boolean status;
-	private List<Role> roles;
+	@OneToOne(cascade=CascadeType.ALL)
+	private Pessoa pessoa;
+
 	
 	
 	
-
-	public List<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
-	}
-
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	
+
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
 	}
 
 	public String getLogin() {
@@ -54,6 +67,6 @@ public class Usuario {
 	}
 	
 	
-	
+
 
 }

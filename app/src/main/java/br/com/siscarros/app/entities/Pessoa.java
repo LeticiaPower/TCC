@@ -2,11 +2,25 @@ package br.com.siscarros.app.entities;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name="tbl_pessoa")
 public class Pessoa {
 	
-
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
+    @Column(name="nome_pessoa")
 	private String nome;
+    @Temporal(TemporalType.DATE)
 	private Date dataNasc;
 	private String cpf;
 	private Integer telefone;
@@ -19,7 +33,7 @@ public class Pessoa {
 	private String estado;
 	private String bairro;
 	private String pais;
-	private Usuario usuario;
+	
 
 	
 	
@@ -31,12 +45,6 @@ public class Pessoa {
 		this.id = id;
 	}
 	
-	public Usuario getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
 	public String getNome() {
 		return nome;
 	}
