@@ -1,5 +1,5 @@
 package br.com.siscarros.app.dao;
 
-public class TelefoneDao {
+public interface TelefoneDao extends JpaRepository<Telefone, Long>{
 
 }

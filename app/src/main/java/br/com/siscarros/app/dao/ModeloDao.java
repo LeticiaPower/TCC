@@ -1,5 +1,5 @@
 package br.com.siscarros.app.dao;
 
-public class ModeloDao {
+public interface ModeloDao extends JpaRepository<Modelo, Long>{
 
 }

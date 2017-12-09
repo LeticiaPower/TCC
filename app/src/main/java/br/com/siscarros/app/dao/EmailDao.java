@@ -1,5 +1,5 @@
 package br.com.siscarros.app.dao;
 
-public class EmailDao {
+public interface EmailDao extends JpaRepository<Email, Long>{
 
 }

@@ -1,5 +1,27 @@
 package br.com.siscarros.app.service;
 
-public class DadosEmpresaService {
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.siscarros.app.dao.UsuarioDao;
+import br.com.siscarros.app.entities.Usuario;
+
+@Service
+public class DadosEmpresaService implements DadosEmpresaServiceInt{
+	
+	@Autowired
+	private DadosEmpresaDao dadosEmpresaDao;
+
+	@Override
+	public DadosEmpresa CadastraDadosEmpresa(DadosEmpresa dadosE) {
+		return dadosEmpresaDao.save(dadosE);
+	}
+
+	@Override
+	public List<DadosEmpresa> ListaDadosEmpresa() {
+		return dadosEmpresaDao.findAll();
+	}
 
 }

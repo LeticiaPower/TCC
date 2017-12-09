@@ -1,5 +1,5 @@
 package br.com.siscarros.app.dao;
 
-public class RoleDao {
+public interface RoleDao extends JpaRepository<Role, Long>{
 
 }

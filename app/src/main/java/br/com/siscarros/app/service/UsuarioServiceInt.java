@@ -8,6 +8,6 @@ public interface UsuarioServiceInt {
 
 	Usuario CadastraUsuario (Usuario user);
 	
-	List<Usuario> SelecionaUsuario();
+	List<Usuario> ListaUsuario();
 	
 }

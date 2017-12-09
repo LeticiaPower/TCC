@@ -1,5 +1,5 @@
 package br.com.siscarros.app.dao;
 
-public class MarcaDao {
+public interface MarcaDao extends JpaRepository<Usuario, Long>{
 
 }

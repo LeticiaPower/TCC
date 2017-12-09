@@ -1,5 +1,5 @@
 package br.com.siscarros.app.dao;
 
-public class CaracteristivaDao {
+public interface CaracteristivaDao extends JpaRepository<Caracteristica, Long>{
 
 }

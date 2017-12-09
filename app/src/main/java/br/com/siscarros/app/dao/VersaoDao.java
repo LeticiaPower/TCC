@@ -1,5 +1,5 @@
 package br.com.siscarros.app.dao;
 
-public class VersaoDao {
+public itnerface VersaoDao extends JpaRepository<Versao, Long>{
 
 }

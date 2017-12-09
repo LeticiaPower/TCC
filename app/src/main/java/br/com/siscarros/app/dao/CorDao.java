@@ -1,5 +1,5 @@
 package br.com.siscarros.app.dao;
 
-public class CorDao {
+public interface CorDao extends JpaRepository<Cor, Long> {
 
 }

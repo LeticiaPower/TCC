@@ -20,7 +20,7 @@ public class UsuarioService implements UsuarioServiceInt {
 	}
 
 	@Override
-	public List<Usuario> SelecionaUsuario() {
+	public List<Usuario> ListaUsuario() {
 		return usuarioDao.findAll();
 	}
 	

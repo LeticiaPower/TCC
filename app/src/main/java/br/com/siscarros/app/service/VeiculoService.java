@@ -1,5 +1,13 @@
 package br.com.siscarros.app.service;
 
-public class VeiculoService {
+import java.util.List;
+
+import br.com.siscarros.app.entities.Veiculo;
+
+public interface VeiculoServiceInt {
+	
+	Veiculo CadastraVeiculo (Veiculo veiculo);
+	
+	List<Veiculo> ListaVeiculo();
 
 }

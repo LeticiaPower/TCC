@@ -14,7 +14,7 @@ import br.com.siscarros.app.service.UsuarioServiceInt;
 @RestController
 public class UsuarioController {
 	
-	@GetMapping(path="/Cadastro")
+	@GetMapping(path="/CadastroUsuario")
 	public void TesteUsuario () {		
 	
 		
@@ -36,7 +36,7 @@ public class UsuarioController {
     
 	}
     
-	@GetMapping(path="/Lista")
+	@GetMapping(path="/ListaUsuario")
 	public List<Usuario> ListaUsuario () {
 			
 	return usuarioService.SelecionaUsuario();	

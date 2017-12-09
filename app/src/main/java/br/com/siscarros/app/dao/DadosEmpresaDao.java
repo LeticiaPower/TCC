@@ -1,5 +1,5 @@
 package br.com.siscarros.app.dao;
 
-public class DadosEmpresaDao {
+public interface DadosEmpresaDao extends JpaRepository<DadosEmpresa, Long>{
 
 }
