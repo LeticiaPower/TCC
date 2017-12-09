@@ -11,8 +11,11 @@ import br.com.siscarros.app.service.DadosAnuncioServiceInt;
 
 
 
-@RestController
+@RestController(value="/dadosAnuncio")
 public class DadosAnuncioController {
+	
+	@Autowired
+    private DadosAnuncioServiceInt dadosAnuncioService;
 	
 	@GetMapping(path="/CadastraDadosAnuncio")
 	public void CadastraDadosAnuncio () {	
@@ -22,7 +25,7 @@ public class DadosAnuncioController {
 	@GetMapping(path="/ListaDadosAnuncio")
 	public List<DadosAnuncio> ListaDadosAnuncio () {
 			
-	return dadosAnuncioService.ListaDadosAnuncio();	
+	return dadosAnuncioService.ListaTodos();	
 		
 	}
 	
@@ -35,9 +38,11 @@ public class DadosAnuncioController {
 		
 	}
 	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
-	@Autowired
-    private DadosAnuncioServiceInt dadosAnuncioService;
+	
     
 
 }

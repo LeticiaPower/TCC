@@ -15,13 +15,31 @@ public class VersaoService implements VersaoServiceInt{
 	private VersaoDao versaoDao;
 
 	@Override
-	public Versao CadastraVersao(Versao versao) {
+	public Versao Cadastra(Versao versao) {
 		return versaoDao.save(versao);
 	}
 
 	@Override
-	public List<Versao> ListaVersao() {
+	public Versao Altera(Versao versao) {
+		return versaoDao.save(versao);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+		
+	}
+
+	@Override
+	public List<Versao> ListaTodos() {
 		return versaoDao.findAll();
 	}
 
+	@Override
+	public Versao BuscaPorId(Long id) {
+		return versaoDao.findOne(id);
+	}
+
+
+
+	
 }

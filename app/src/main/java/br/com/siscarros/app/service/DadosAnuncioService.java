@@ -15,13 +15,30 @@ public class DadosAnuncioService implements DadosAnuncioServiceInt {
 	private DadosAnuncioDao dadosAnuncioDao;
 
 	@Override
-	public DadosAnuncio CadastraDadosAnuncio(DadosAnuncio dadosA) {
-		return dadosAnuncioDao.save(dadosA);
+	public DadosAnuncio Cadastra(DadosAnuncio dadosAnuncio) {
+		return dadosAnuncioDao.save(dadosAnuncio);
 	}
 
 	@Override
-	public List<DadosAnuncio> ListaDadosAnuncio() {
+	public DadosAnuncio Altera(DadosAnuncio dadosAnuncio) {
+		return dadosAnuncioDao.save(dadosAnuncio);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+		
+	}
+
+	@Override
+	public List<DadosAnuncio> ListaTodos() {
 		return dadosAnuncioDao.findAll();
 	}
+
+	@Override
+	public DadosAnuncio BuscaPorId(Long id) {
+		return dadosAnuncioDao.findOne(id);
+	}
+
+
 
 }

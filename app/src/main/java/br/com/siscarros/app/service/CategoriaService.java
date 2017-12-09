@@ -15,14 +15,30 @@ public class CategoriaService implements CategoriaServiceInt{
 	private CategoriaDao categoriaDao;
 
 	@Override
-	public Categoria CadastraCategoria(Categoria categ) {
-		return categoriaDao.save(categ);
+	public Categoria Cadastra(Categoria categoria) {
+		return categoriaDao.save(categoria);
 	}
 
 	@Override
-	public List<Categoria> ListaCategoria() {
+	public Categoria Altera(Categoria categoria) {
+		return categoriaDao.save(categoria);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+		
+	}
+
+	@Override
+	public List<Categoria> ListaTodos() {
 		return categoriaDao.findAll();
 	}
+
+	@Override
+	public Categoria BuscaPorId(Long id) {
+		return categoriaDao.findOne(id);
+	}
+
 	
 
 }

@@ -10,8 +10,12 @@ import br.com.siscarros.app.entities.Modelo;
 import br.com.siscarros.app.service.ModeloServiceInt;
 
 
-@RestController
+@RestController(value="/modelo")
 public class ModeloController {
+	
+	@Autowired
+    private ModeloServiceInt modeloService;
+    
 
 	@GetMapping(path="/CadastraModelo")
 	public void CadastraModelo () {	
@@ -21,7 +25,7 @@ public class ModeloController {
 	@GetMapping(path="/ListaModelo")
 	public List<Modelo> ListaModelo () {
 			
-	return modeloService.ListaModelo();	
+	return modeloService.ListaTodos();	
 		
 	}
 	
@@ -35,7 +39,10 @@ public class ModeloController {
 	}
 	
 	
-	@Autowired
-    private ModeloServiceInt modeloService;
-    
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
+	
+	
+	
 }

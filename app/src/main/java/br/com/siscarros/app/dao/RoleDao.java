@@ -10,6 +10,6 @@ import br.com.siscarros.app.entities.Role;
 
 
 @Repository
-public interface RoleDao extends JpaRepository<Role, Long>{
+public interface RoleDao extends JpaRepository<Role, String>{
 
 }

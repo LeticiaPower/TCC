@@ -11,17 +11,22 @@ import br.com.siscarros.app.service.DadosEmpresaServiceInt;
 
 
 
-@RestController
+@RestController(value="/dadosEmpresa")
 public class DadosEmpresaController {
+	
+	@Autowired
+    private DadosEmpresaServiceInt dadosEmpresaService;
+	
 	@GetMapping(path="/CadastraDadosEmpresa")
 	public void CadastraDadosEmpresa () {	
+	
 	}
 	
 	
 	@GetMapping(path="/ListaDadosEmpresa")
 	public List<DadosEmpresa> ListaDadosEmpresa () {
 			
-	return dadosEmpresaService.ListaDadosEmpresa();	
+	return dadosEmpresaService.ListaTodos();	
 		
 	}
 	
@@ -34,8 +39,11 @@ public class DadosEmpresaController {
 		
 	}
 	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
-	@Autowired
-    private DadosEmpresaServiceInt dadosEmpresaService;
+	
+	
 
 }

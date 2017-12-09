@@ -15,13 +15,30 @@ public class CaracteristicaService implements CaracteristicaServiceInt{
 	private CaracteristicaDao caracteristicaDao;
 
 	@Override
-	public Caracteristica CadastraCaracteristica(Caracteristica carac) {
-		return caracteristicaDao.save(carac);
+	public Caracteristica Cadastra(Caracteristica caracteristica) {
+		return caracteristicaDao.save(caracteristica);
 	}
 
 	@Override
-	public List<Caracteristica> ListaCaracteristica() {
+	public Caracteristica Altera(Caracteristica caracteristica) {
+		return caracteristicaDao.save(caracteristica);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+		
+	}
+
+	@Override
+	public List<Caracteristica> ListaTodos() {
 		return caracteristicaDao.findAll();
 	}
+
+	@Override
+	public Caracteristica BuscaPorId(Long id) {
+		return caracteristicaDao.findOne(id);
+	}
+
+
 
 }

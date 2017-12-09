@@ -15,13 +15,30 @@ public class EmailService implements EmailServiceInt{
 	private EmailDao emailDao;
 
 	@Override
-	public Email CadastraEmail(Email email) {
+	public Email Cadastra(Email email) {
 		return emailDao.save(email);
 	}
 
 	@Override
-	public List<Email> ListaEmail() {
+	public Email Altera(Email email) {
+		return emailDao.save(email);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+		
+	}
+
+	@Override
+	public List<Email> ListaTodos() {
 		return emailDao.findAll();
 	}
+
+	@Override
+	public Email BuscaPorId(Long id) {
+		return emailDao.findOne(id);
+	}
+
+
 	
 }

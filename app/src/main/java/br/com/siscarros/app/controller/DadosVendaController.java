@@ -11,8 +11,11 @@ import br.com.siscarros.app.service.DadosVendaServiceInt;
 
 
 
-@RestController
+@RestController(value="/dadosVenda")
 public class DadosVendaController {
+	
+	@Autowired
+    private DadosVendaServiceInt dadosVendaService;
 	
 	@GetMapping(path="/CadastraDadosVenda")
 	public void CadastraDadosVenda () {	
@@ -22,7 +25,7 @@ public class DadosVendaController {
 	@GetMapping(path="/ListaDadosVenda")
 	public List<DadosVenda> ListaDadosVenda () {
 			
-	return dadosVendaService.ListaDadosVenda();	
+	return dadosVendaService.ListaTodos();	
 		
 	}
 	
@@ -35,9 +38,11 @@ public class DadosVendaController {
 		
 	}
 	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
-	@Autowired
-    private DadosVendaServiceInt dadosVendaService;
+	
     
 
 }

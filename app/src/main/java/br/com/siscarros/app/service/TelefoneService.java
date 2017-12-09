@@ -15,13 +15,30 @@ public class TelefoneService implements TelefoneServiceInt{
 	private TelefoneDao telefoneDao;
 
 	@Override
-	public Telefone CadastraTelefone(Telefone telefone) {
+	public Telefone Cadastra(Telefone telefone) {
 		return telefoneDao.save(telefone);
 	}
 
 	@Override
-	public List<Telefone> ListaTelefone () {
+	public Telefone Altera(Telefone telefone) {
+		return telefoneDao.save(telefone);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+	
+	}
+
+	@Override
+	public List<Telefone> ListaTodos() {
 		return telefoneDao.findAll();
 	}
+
+	@Override
+	public Telefone BuscaPorId(Long id) {
+		return telefoneDao.findOne(id);
+	}
+
+	
 
 }

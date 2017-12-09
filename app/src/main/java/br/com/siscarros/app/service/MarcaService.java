@@ -15,13 +15,31 @@ public class MarcaService implements MarcaServiceInt{
 	private MarcaDao marcaDao;
 
 	@Override
-	public Marca CadastraMarca(Marca marca) {
+	public Marca Cadastra(Marca marca) {
 		return marcaDao.save(marca);
 	}
 
 	@Override
-	public List<Marca> ListaMarca() {
+	public Marca Altera(Marca marca) {
+		return marcaDao.save(marca);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+
+		
+	}
+
+	@Override
+	public List<Marca> ListaTodos() {
 		return marcaDao.findAll();
 	}
+
+	@Override
+	public Marca BuscaPorId(Long id) {
+		return marcaDao.findOne(id);
+	}
+
+
 
 }

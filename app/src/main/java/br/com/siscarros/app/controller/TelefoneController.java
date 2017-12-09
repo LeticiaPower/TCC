@@ -11,8 +11,12 @@ import br.com.siscarros.app.service.TelefoneServiceInt;
 
 
 
-@RestController
+@RestController(value="/telefone")
 public class TelefoneController {
+	
+	@Autowired
+    private TelefoneServiceInt telefoneService;
+    
 	
 	@GetMapping(path="/CadastraTelefone")
 	public void CadastraTelefone () {	
@@ -22,7 +26,7 @@ public class TelefoneController {
 	@GetMapping(path="/ListaTelefone")
 	public List<Telefone> ListaTelefone () {
 			
-	return telefoneService.ListaTelefone();	
+	return telefoneService.ListaTodos();	
 		
 	}
 	
@@ -34,10 +38,13 @@ public class TelefoneController {
 	public void AlteraTelefone () {
 		
 	}
+	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
+	
 
-	@Autowired
-    private TelefoneServiceInt telefoneService;
-    
+	
     
 	
 }

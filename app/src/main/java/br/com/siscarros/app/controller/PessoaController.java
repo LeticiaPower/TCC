@@ -10,8 +10,12 @@ import br.com.siscarros.app.entities.Pessoa;
 import br.com.siscarros.app.service.PessoaServiceInt;
 
 
-@RestController
+@RestController(value="/pessoa")
 public class PessoaController {
+	
+	
+	@Autowired
+    private PessoaServiceInt pessoaService;
 	
 	@GetMapping(path="/CadastraPessoa")
 	public void CadastraPessoa () {	
@@ -21,7 +25,7 @@ public class PessoaController {
 	@GetMapping(path="/ListaPessoa")
 	public List<Pessoa> ListaPessoa () {
 			
-	return pessoaService.ListaPessoa();	
+	return pessoaService.ListaTodos();	
 		
 	}
 	
@@ -34,9 +38,11 @@ public class PessoaController {
 		
 	}
 	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
-	@Autowired
-    private PessoaServiceInt pessoaService;
+
     
     
 

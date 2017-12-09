@@ -1,13 +1,10 @@
 package br.com.siscarros.app.service;
 
-import java.util.List;
+
 
 import br.com.siscarros.app.entities.Marca;
 
-public interface MarcaServiceInt {
+public interface MarcaServiceInt extends CrudService<Marca, Long>{
 	
-	Marca CadastraMarca (Marca marca);
-	
-	List<Marca> ListaMarca();
 
 }

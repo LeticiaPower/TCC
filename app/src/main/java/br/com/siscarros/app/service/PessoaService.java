@@ -15,13 +15,30 @@ public class PessoaService implements PessoaServiceInt{
 	private PessoaDao pessoaDao;
 
 	@Override
-	public Pessoa CadastraPessoa(Pessoa pessoa) {
+	public Pessoa Cadastra(Pessoa pessoa) {
 		return pessoaDao.save(pessoa);
 	}
 
 	@Override
-	public List<Pessoa> ListaPessoa() {
+	public Pessoa Altera(Pessoa pessoa) {
+		return pessoaDao.save(pessoa);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+
+		
+	}
+
+	@Override
+	public List<Pessoa> ListaTodos() {
 		return pessoaDao.findAll();
 	}
 
+	@Override
+	public Pessoa BuscaPorId(Long id) {
+		return pessoaDao.findOne(id);
+	}
+
+	
 }

@@ -15,13 +15,30 @@ public class DadosVendaService implements DadosVendaServiceInt{
 	private DadosVendaDao dadosVendaDao;
 
 	@Override
-	public DadosVenda CadastraDadosVenda(DadosVenda dadosV) {
-		return dadosVendaDao.save(dadosV);
+	public DadosVenda Cadastra(DadosVenda dadosVenda) {
+		return dadosVendaDao.save(dadosVenda);
 	}
 
 	@Override
-	public List<DadosVenda> ListaDadosVenda() {
+	public DadosVenda Altera(DadosVenda dadosVenda) {
+		return dadosVendaDao.save(dadosVenda);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+		
+	}
+
+	@Override
+	public List<DadosVenda> ListaTodos() {
 		return dadosVendaDao.findAll();
 	}
+
+	@Override
+	public DadosVenda BuscaPorId(Long id) {
+		return dadosVendaDao.findOne(id);
+	}
+
+
 
 }

@@ -1,13 +1,10 @@
 package br.com.siscarros.app.service;
 
-import java.util.List;
 
 import br.com.siscarros.app.entities.Caracteristica;
 
-public interface CaracteristicaServiceInt {
+public interface CaracteristicaServiceInt extends CrudService<Caracteristica, Long> {
 	
-	Caracteristica CadastraCaracteristica (Caracteristica carac);
-	
-	List<Caracteristica> ListaCaracteristica();
+
 
 }

@@ -1,14 +1,11 @@
 package br.com.siscarros.app.service;
 
-import java.util.List;
+
 
 import br.com.siscarros.app.entities.Cor;
 
 
-public interface CorServiceInt {
+public interface CorServiceInt extends CrudService<Cor, Long> {
 	
-	Cor CadastraCor (Cor cor);
-	
-	List<Cor> ListaCor();
 
 }

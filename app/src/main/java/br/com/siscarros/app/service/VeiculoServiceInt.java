@@ -1,13 +1,9 @@
 package br.com.siscarros.app.service;
 
-import java.util.List;
-
 import br.com.siscarros.app.entities.Veiculo;
 
-public interface VeiculoServiceInt {
+public interface VeiculoServiceInt extends CrudService<Veiculo, Long>{
 	
-	Veiculo CadastraVeiculo (Veiculo veiculo);
-	
-	List<Veiculo> ListaVeiculo();
+
 
 }

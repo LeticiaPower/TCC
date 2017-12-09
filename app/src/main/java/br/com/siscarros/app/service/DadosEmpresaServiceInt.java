@@ -1,13 +1,9 @@
 package br.com.siscarros.app.service;
 
-import java.util.List;
 
 import br.com.siscarros.app.entities.DadosEmpresa;
 
-public interface DadosEmpresaServiceInt {
+public interface DadosEmpresaServiceInt extends CrudService<DadosEmpresa, Long> {
 	
-	DadosEmpresa CadastraDadosEmpresa (DadosEmpresa dadosE);
-	
-	List<DadosEmpresa> ListaDadosEmpresa();
 
 }

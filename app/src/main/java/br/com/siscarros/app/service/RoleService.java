@@ -15,13 +15,14 @@ public class RoleService implements RoleServiceInt {
 	private RoleDao roleDao;
 
 	@Override
-	public Role CadastraRole (Role role) {
-		return roleDao.save(role);
+	public List<Role> ListaTodos() {
+		return roleDao.findAll();
 	}
 
 	@Override
-	public List<Role> ListaRole() {
-		return roleDao.findAll();
+	public Role BuscaPorNome(String nome) {
+		return roleDao.findOne(nome);
 	}
+
 
 }

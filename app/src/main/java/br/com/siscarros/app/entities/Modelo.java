@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,16 +17,17 @@ public class Modelo {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String nomeModelo;
-	private List<Versao> versoes;
+	@OneToMany
+	private List<Versao> versao;
 	
 	
 	
 	
-	public List<Versao> getVersoes() {
-		return versoes;
+	public List<Versao> getVersao() {
+		return versao;
 	}
-	public void setVersoes(List<Versao> versoes) {
-		this.versoes = versoes;
+	public void setVersao(List<Versao> versao) {
+		this.versao = versao;
 	}
 	public Long getId() {
 		return id;

@@ -15,13 +15,31 @@ public class ModeloService implements ModeloServiceInt{
 	private ModeloDao modeloDao;
 
 	@Override
-	public Modelo CadastraModelo(Modelo modelo) {
+	public Modelo Cadastra(Modelo modelo) {
 		return modeloDao.save(modelo);
 	}
 
 	@Override
-	public List<Modelo> ListaModelo() {
+	public Modelo Altera(Modelo modelo) {
+		return modeloDao.save(modelo);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+
+		
+	}
+
+	@Override
+	public List<Modelo> ListaTodos() {
 		return modeloDao.findAll();
 	}
+
+	@Override
+	public Modelo BuscaPorId(Long id) {
+		return modeloDao.findOne(id);
+	}
+
+
 
 }

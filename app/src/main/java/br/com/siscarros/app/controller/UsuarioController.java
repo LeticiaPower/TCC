@@ -10,8 +10,12 @@ import br.com.siscarros.app.entities.Pessoa;
 import br.com.siscarros.app.entities.Usuario;
 import br.com.siscarros.app.service.UsuarioServiceInt;
 
-@RestController
+@RestController(value="/usuario")
 public class UsuarioController {
+	
+	@Autowired
+    private UsuarioServiceInt usuarioService;
+    
 	
 	@GetMapping(path="/CadastroUsuario")
 	public void TesteUsuario () {		
@@ -30,7 +34,7 @@ public class UsuarioController {
 	u.setStatus(false);
     u.setPessoa(p);
     
-    usuarioService.CadastraUsuario(u);
+    usuarioService.Cadastra(u);
     
     
 	}
@@ -38,7 +42,7 @@ public class UsuarioController {
 	@GetMapping(path="/ListaUsuario")
 	public List<Usuario> ListaUsuario () {
 			
-	return usuarioService.ListaUsuario();	
+	return usuarioService.ListaTodos();	
 		
 	}
 	
@@ -51,9 +55,11 @@ public class UsuarioController {
 		
 	}
 	
-	@Autowired
-    private UsuarioServiceInt usuarioService;
-    
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
+	
+
     
 	
 	

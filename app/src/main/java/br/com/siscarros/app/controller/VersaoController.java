@@ -1,5 +1,7 @@
 package br.com.siscarros.app.controller;
 
+
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,33 +13,47 @@ import br.com.siscarros.app.service.VersaoServiceInt;
 
 
 
-@RestController
+@RestController(value="/versao")
 public class VersaoController {
+	
+	@Autowired
+    private VersaoServiceInt versaoService;
 	
 	@GetMapping(path="/CadastraVersao")
 	public void CadastraVersao () {	
+		
+		Versao v = new Versao();
+		v.setNomeVersao("Way");
+		v.setNomeVersao("Vivace");
+				
+		versaoService.Cadastra(v);
+		
 	}
-	
 	
 	@GetMapping(path="/ListaVersao")
 	public List<Versao> ListaVersao () {
 			
-	return versaoService.ListaVersao();	
-		
+	return versaoService.ListaTodos();		
 	}
 	
 	@GetMapping(path="/ExcluiVersao")
 	public void ExcluiVersao () {
 		
+		
 	}
-	@GetMapping(path="/AlterarVersao")
+	@GetMapping(path="/AlteraVersao")
 	public void AlteraVersao () {
+	
 		
 	}
 	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
-	@Autowired
-    private VersaoServiceInt versaoService;
+	
+	
+
     
     
 	

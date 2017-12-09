@@ -16,13 +16,30 @@ public class DadosEmpresaService implements DadosEmpresaServiceInt{
 	private DadosEmpresaDao dadosEmpresaDao;
 
 	@Override
-	public DadosEmpresa CadastraDadosEmpresa(DadosEmpresa dadosE) {
-		return dadosEmpresaDao.save(dadosE);
+	public DadosEmpresa Cadastra(DadosEmpresa dadosEmpresa) {
+		return dadosEmpresaDao.save(dadosEmpresa);
 	}
 
 	@Override
-	public List<DadosEmpresa> ListaDadosEmpresa() {
+	public DadosEmpresa Altera(DadosEmpresa dadosEmpresa) {
+		return dadosEmpresaDao.save(dadosEmpresa);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+		
+	}
+
+	@Override
+	public List<DadosEmpresa> ListaTodos() {
 		return dadosEmpresaDao.findAll();
 	}
+
+	@Override
+	public DadosEmpresa BuscaPorId(Long id) {
+		return dadosEmpresaDao.findOne(id);
+	}
+
+
 
 }

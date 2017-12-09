@@ -1,10 +1,13 @@
 package br.com.siscarros.app.entities;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -20,6 +23,8 @@ public class Usuario {
 	private Boolean status;
 	@OneToOne(cascade=CascadeType.ALL)
 	private Pessoa pessoa;
+	@ManyToMany
+	private List<Role> role;
 
 	public Long getId() {
 		return id;
@@ -61,6 +66,14 @@ public class Usuario {
 
 	public void setStatus(Boolean status) {
 		this.status = status;
+	}
+
+	public List<Role> getRole() {
+		return role;
+	}
+
+	public void setRole(List<Role> role) {
+		this.role = role;
 	}
 	
 	

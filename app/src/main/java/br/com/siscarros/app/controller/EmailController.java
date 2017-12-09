@@ -11,8 +11,12 @@ import br.com.siscarros.app.service.EmailServiceInt;
 
 
 
-@RestController
+@RestController(value="/email")
 public class EmailController {
+	
+	@Autowired
+    private EmailServiceInt emailService;
+    
 	
 	@GetMapping(path="/CadastraEmail")
 	public void CadastraEmail () {	
@@ -22,23 +26,22 @@ public class EmailController {
 	@GetMapping(path="/ListaEmail")
 	public List<Email> ListaEmail () {
 			
-	return emailService.ListaEmail();	
+	return emailService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiVersao")
-	public void ExcluiVersao () {
+	@GetMapping(path="/ExcluiEmail")
+	public void ExcluiEmail () {
 		
 	}
 	@GetMapping(path="/AlterarEmail")
 	public void AlteraEmail () {
 		
 	}
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
 	
-	@Autowired
-    private EmailServiceInt emailService;
-    
-    
 
 }

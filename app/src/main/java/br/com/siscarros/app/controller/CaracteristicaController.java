@@ -10,8 +10,12 @@ import br.com.siscarros.app.entities.Caracteristica;
 import br.com.siscarros.app.service.CaracteristicaServiceInt;
 
 
-@RestController
+@RestController(value="/caracteristica")
 public class CaracteristicaController {
+	
+	@Autowired
+    private CaracteristicaServiceInt caracteristicaService;
+	
 	@GetMapping(path="/CadastraCaracteristica")
 	public void CadastraCaracteristica () {	
 	}
@@ -20,7 +24,7 @@ public class CaracteristicaController {
 	@GetMapping(path="/ListaCaracteristica")
 	public List<Caracteristica> ListaCaracteristica () {
 			
-	return caracteristicaService.ListaCaracteristica();	
+	return caracteristicaService.ListaTodos();	
 		
 	}
 	
@@ -33,9 +37,11 @@ public class CaracteristicaController {
 		
 	}
 	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
-	@Autowired
-    private CaracteristicaServiceInt caracteristicaService;
+	
     
 
 }

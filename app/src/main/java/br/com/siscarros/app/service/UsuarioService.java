@@ -15,14 +15,32 @@ public class UsuarioService implements UsuarioServiceInt {
 	private UsuarioDao usuarioDao;
 
 	@Override
-	public Usuario CadastraUsuario(Usuario user) {
-		return usuarioDao.save(user);
+	public Usuario Cadastra(Usuario usuario) {
+		return usuarioDao.save(usuario);
 	}
 
 	@Override
-	public List<Usuario> ListaUsuario() {
+	public Usuario Altera(Usuario usuario) {
+		return usuarioDao.save(usuario);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+	
+		
+	}
+
+	@Override
+	public List<Usuario> ListaTodos() {
 		return usuarioDao.findAll();
 	}
+
+	@Override
+	public Usuario BuscaPorId(Long id) {
+		return usuarioDao.findOne(id);
+	}
+
+	
 	
 
 }

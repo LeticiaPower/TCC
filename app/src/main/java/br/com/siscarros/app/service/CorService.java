@@ -15,13 +15,31 @@ public class CorService implements CorServiceInt{
 	private CorDao corDao;
 
 	@Override
-	public Cor CadastraCor(Cor cor) {
+	public Cor Cadastra(Cor cor) {
 		return corDao.save(cor);
 	}
 
 	@Override
-	public List<Cor> ListaCor() {
+	public Cor Altera(Cor cor) {
+		return corDao.save(cor);
+	}
+
+	@Override
+	public void Deleta(Long id) {
+		
+	}
+
+	@Override
+	public List<Cor> ListaTodos() {
 		return corDao.findAll();
 	}
+
+	@Override
+	public Cor BuscaPorId(Long id) {
+		return corDao.findOne(id);
+	}
+
+	
+
 
 }

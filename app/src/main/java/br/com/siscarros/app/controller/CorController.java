@@ -10,8 +10,12 @@ import br.com.siscarros.app.entities.Cor;
 import br.com.siscarros.app.service.CorServiceInt;
 
 
-@RestController
+@RestController(value="/cor")
 class CorController {
+	
+	@Autowired
+    private CorServiceInt corService;
+	
 	@GetMapping(path="/CadastraCor")
 	public void CadastraCor () {	
 	}
@@ -20,7 +24,7 @@ class CorController {
 	@GetMapping(path="/ListaCor")
 	public List<Cor> ListaCor () {
 			
-	return corService.ListaCor();	
+	return corService.ListaTodos();	
 		
 	}
 	
@@ -33,9 +37,11 @@ class CorController {
 		
 	}
 	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
-	@Autowired
-    private CorServiceInt corService;
+	
     
 
 }

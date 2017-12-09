@@ -10,8 +10,12 @@ import br.com.siscarros.app.entities.Marca;
 import br.com.siscarros.app.service.MarcaServiceInt;
 
 
-@RestController
+@RestController(value="/marca")
 public class MarcaController {
+	
+	@Autowired
+    private MarcaServiceInt marcaService;
+
 	
 	@GetMapping(path="/CadastraMarca")
 	public void CadastraMarca () {	
@@ -21,7 +25,7 @@ public class MarcaController {
 	@GetMapping(path="/ListaMarca")
 	public List<Marca> ListaMarca () {
 			
-	return marcaService.ListaMarca();	
+	return marcaService.ListaTodos();	
 		
 	}
 	
@@ -34,8 +38,10 @@ public class MarcaController {
 		
 	}
 	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
-	@Autowired
-    private MarcaServiceInt marcaService;
-
+	
+	
 }

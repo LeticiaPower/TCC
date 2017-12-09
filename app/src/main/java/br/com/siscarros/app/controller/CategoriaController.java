@@ -11,8 +11,11 @@ import br.com.siscarros.app.service.CategoriaServiceInt;
 
 
 
-@RestController
+@RestController(value="/categoria")
 public class CategoriaController {
+	
+	@Autowired
+    private CategoriaServiceInt categoriaService;
 	
 	@GetMapping(path="/CadastraCategoria")
 	public void CadastraCategoria () {	
@@ -22,7 +25,7 @@ public class CategoriaController {
 	@GetMapping(path="/ListaCategoria")
 	public List<Categoria> ListaCategoria () {
 			
-	return categoriaService.ListaCategoria();	
+	return categoriaService.ListaTodos();	
 		
 	}
 	
@@ -35,8 +38,11 @@ public class CategoriaController {
 		
 	}
 	
+	@GetMapping(path="/BuscaPorId")
+	public void BuscaPorId () { 	
+	}
 	
-	@Autowired
-    private CategoriaServiceInt categoriaService;
+	
+
 
 }
