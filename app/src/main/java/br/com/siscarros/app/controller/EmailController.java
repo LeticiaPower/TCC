@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.siscarros.app.entities.Email;
@@ -11,7 +12,8 @@ import br.com.siscarros.app.service.EmailServiceInt;
 
 
 
-@RestController(value="/email")
+@RestController
+@RequestMapping("/email")
 public class EmailController {
 	
 	@Autowired
