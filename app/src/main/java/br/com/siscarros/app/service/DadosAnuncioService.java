@@ -9,7 +9,7 @@ import br.com.siscarros.app.dao.DadosAnuncioDao;
 import br.com.siscarros.app.entities.DadosAnuncio;
 
 @Service
-public class DadosAnuncioService {
+public class DadosAnuncioService implements DadosAnuncioServiceInt {
 	
 	@Autowired
 	private DadosAnuncioDao dadosAnuncioDao;
@@ -20,7 +20,7 @@ public class DadosAnuncioService {
 	}
 
 	@Override
-	public List<DadosAnuncio> LisaDadosAnuncio() {
+	public List<DadosAnuncio> ListaDadosAnuncio() {
 		return dadosAnuncioDao.findAll();
 	}
 

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import br.com.siscarros.app.dao.EmailDao;
 import br.com.siscarros.app.entities.Email;
 
+@Service
 public class EmailService implements EmailServiceInt{
 	
 	@Autowired

@@ -8,6 +8,6 @@ public interface MarcaServiceInt {
 	
 	Marca CadastraMarca (Marca marca);
 	
-	List<Marca> ListaMarca()
+	List<Marca> ListaMarca();
 
 }

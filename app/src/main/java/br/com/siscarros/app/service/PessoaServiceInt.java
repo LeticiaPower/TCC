@@ -4,10 +4,11 @@ import java.util.List;
 
 import br.com.siscarros.app.entities.Pessoa;
 
-public class PessoaServiceInt {
+public interface PessoaServiceInt {
 	
 	Pessoa CadastraPessoa (Pessoa pessoa);
 	
 	List<Pessoa> ListaPessoa();
+	
 	
 }

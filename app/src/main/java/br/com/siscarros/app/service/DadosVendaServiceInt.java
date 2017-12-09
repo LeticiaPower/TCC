@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.siscarros.app.entities.DadosVenda;
 
-public itnerface DadosVendaServiceInt {
+public interface DadosVendaServiceInt {
 	
 	DadosVenda CadastraDadosVenda (DadosVenda dadosV);
 	

@@ -1,5 +1,9 @@
 package br.com.siscarros.app.dao;
 
-public interface CategoriaDao extends JpaRepository<Categoria, Long>{
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.siscarros.app.entities.Categoria;
+
+public interface CategoriaDao extends JpaRepository <Categoria, Long>{
 
 }

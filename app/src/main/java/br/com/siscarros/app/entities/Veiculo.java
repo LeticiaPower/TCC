@@ -3,8 +3,20 @@ package br.com.siscarros.app.entities;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tbl_veiculo")
 public class Veiculo {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private Date anoFabricacao;
 	private Date anoModelo;
@@ -16,13 +28,21 @@ public class Veiculo {
 	private String descricao;
 	private String placa;
 	private Boolean visibilidadePlaca;
+	@ManyToOne
 	private Cor cor;
+	@ManyToOne
 	private Marca marca;
+	@ManyToOne
 	private Modelo modelo;
+	@ManyToOne
 	private Categoria categoria;
+	@ManyToOne
 	private Versao versao;
+	@ManyToOne
 	private Pessoa pessoa;
+	@ManyToOne
 	private DadosAnuncio dadosAnuncio;
+	@ManyToMany
 	private List<Caracteristica> caracteristicas;
 	
 	

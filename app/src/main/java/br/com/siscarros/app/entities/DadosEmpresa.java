@@ -1,10 +1,21 @@
 package br.com.siscarros.app.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tbl_dadosEmpresa")
 public class DadosEmpresa {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String nomeFantasia;
 	private String razaoSocial;
+	
 	public Long getId() {
 		return id;
 	}

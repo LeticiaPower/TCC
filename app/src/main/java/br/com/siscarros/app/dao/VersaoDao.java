@@ -1,5 +1,14 @@
 package br.com.siscarros.app.dao;
 
-public itnerface VersaoDao extends JpaRepository<Versao, Long>{
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import br.com.siscarros.app.entities.Versao;
+
+
+@Repository
+public interface VersaoDao extends JpaRepository<Versao, Long>{
 
 }
+
+

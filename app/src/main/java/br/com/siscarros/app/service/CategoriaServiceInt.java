@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.siscarros.app.entities.Categoria;
 
-public interface CategoriaService {
+public interface CategoriaServiceInt {
 	
 	Categoria CadastraCategoria (Categoria categ);
 	

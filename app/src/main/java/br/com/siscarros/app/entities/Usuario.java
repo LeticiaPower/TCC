@@ -21,9 +21,6 @@ public class Usuario {
 	@OneToOne(cascade=CascadeType.ALL)
 	private Pessoa pessoa;
 
-	
-	
-	
 	public Long getId() {
 		return id;
 	}

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.siscarros.app.entities.Pessoa;
 import br.com.siscarros.app.entities.Usuario;
-import br.com.siscarros.app.service.UsuarioService;
 import br.com.siscarros.app.service.UsuarioServiceInt;
 
 @RestController
@@ -39,10 +38,18 @@ public class UsuarioController {
 	@GetMapping(path="/ListaUsuario")
 	public List<Usuario> ListaUsuario () {
 			
-	return usuarioService.SelecionaUsuario();	
+	return usuarioService.ListaUsuario();	
 		
 	}
 	
+	@GetMapping(path="/ExcluiUsuario")
+	public void ExcluiUsuario () {
+		
+	}
+	@GetMapping(path="/AlteraUsuario")
+	public void AlteraUsuario () {
+		
+	}
 	
 	@Autowired
     private UsuarioServiceInt usuarioService;

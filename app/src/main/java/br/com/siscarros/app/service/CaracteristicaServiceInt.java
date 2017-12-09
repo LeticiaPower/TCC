@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.siscarros.app.entities.Caracteristica;
 
-public interface CaracteristicaService {
+public interface CaracteristicaServiceInt {
 	
 	Caracteristica CadastraCaracteristica (Caracteristica carac);
 	
