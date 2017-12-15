@@ -19,29 +19,29 @@ public class ModeloController {
     private ModeloServiceInt modeloService;
     
 
-	@GetMapping(path="/CadastraModelo")
+	@GetMapping(path="/cadastraModelo")
 	public void CadastraModelo () {	
 	}
 	
 	
-	@GetMapping(path="/ListaModelo")
+	@GetMapping(path="/listaModelo")
 	public List<Modelo> ListaModelo () {
 			
 	return modeloService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiModelo")
+	@GetMapping(path="/excluiModelo")
 	public void ExcluiModelo () {
 		
 	}
-	@GetMapping(path="/AlterarModelo")
+	@GetMapping(path="/alterarModelo")
 	public void AlteraModelo () {
 		
 	}
 	
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

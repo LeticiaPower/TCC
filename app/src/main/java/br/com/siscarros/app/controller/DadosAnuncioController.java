@@ -19,28 +19,28 @@ public class DadosAnuncioController {
 	@Autowired
     private DadosAnuncioServiceInt dadosAnuncioService;
 	
-	@GetMapping(path="/CadastraDadosAnuncio")
+	@GetMapping(path="/cadastraDadosAnuncio")
 	public void CadastraDadosAnuncio () {	
 	}
 	
 	
-	@GetMapping(path="/ListaDadosAnuncio")
+	@GetMapping(path="/listaDadosAnuncio")
 	public List<DadosAnuncio> ListaDadosAnuncio () {
 			
 	return dadosAnuncioService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiDadosAnuncio")
+	@GetMapping(path="/excluiDadosAnuncio")
 	public void ExcluiDadosAnuncio () {
 		
 	}
-	@GetMapping(path="/AlterarDadosanuncio")
+	@GetMapping(path="/alterarDadosanuncio")
 	public void AlteraDadosAnuncio () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

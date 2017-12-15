@@ -19,28 +19,28 @@ public class DadosVendaController {
 	@Autowired
     private DadosVendaServiceInt dadosVendaService;
 	
-	@GetMapping(path="/CadastraDadosVenda")
+	@GetMapping(path="/cadastraDadosVenda")
 	public void CadastraDadosVenda () {	
 	}
 	
 	
-	@GetMapping(path="/ListaDadosVenda")
+	@GetMapping(path="/listaDadosVenda")
 	public List<DadosVenda> ListaDadosVenda () {
 			
 	return dadosVendaService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiDadosVenda")
+	@GetMapping(path="/excluiDadosVenda")
 	public void ExcluiDadosVenda () {
 		
 	}
-	@GetMapping(path="/AlterarDadosVenda")
+	@GetMapping(path="/alterarDadosVenda")
 	public void AlteraDadosVenda () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

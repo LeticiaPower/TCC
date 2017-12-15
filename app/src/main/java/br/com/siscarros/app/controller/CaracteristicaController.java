@@ -18,28 +18,28 @@ public class CaracteristicaController {
 	@Autowired
     private CaracteristicaServiceInt caracteristicaService;
 	
-	@GetMapping(path="/CadastraCaracteristica")
+	@GetMapping(path="/cadastraCaracteristica")
 	public void CadastraCaracteristica () {	
 	}
 	
 	
-	@GetMapping(path="/ListaCaracteristica")
+	@GetMapping(path="/listaCaracteristica")
 	public List<Caracteristica> ListaCaracteristica () {
 			
 	return caracteristicaService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiCaracteristica")
+	@GetMapping(path="/excluiCaracteristica")
 	public void ExcluiCaracteristica () {
 		
 	}
-	@GetMapping(path="/AlterarCaracteristica")
+	@GetMapping(path="/alterarCaracteristica")
 	public void AlteraCaracteristica () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

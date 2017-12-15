@@ -7,27 +7,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.siscarros.app.entities.Pessoa;
-import br.com.siscarros.app.service.PessoaServiceInt;
-
+import br.com.siscarros.app.entities.Imagem;
+import br.com.siscarros.app.service.ImagemServiceInt;
 
 @RestController
-@RequestMapping("/pessoa")
-public class PessoaController {
-	
+@RequestMapping("/imagem")
+public class ImagemController {
 	
 	@Autowired
-    private PessoaServiceInt pessoaService;
+    private ImagemServiceInt imagemService;
 	
-	@GetMapping(path="/cadastraPessoa")
-	public void CadastraPessoa () {	
+	@GetMapping(path="/cadastraImagem")
+	public void CadastraImagem () {	
 	}
 	
 	
-	@GetMapping(path="/listaPessoa")
-	public List<Pessoa> ListaPessoa () {
+	@GetMapping(path="/listaImagem")
+	public List<Imagem> ListaImagem () {
 			
-	return pessoaService.ListaTodos();	
+	return imagemService.ListaTodos();	
 		
 	}
 	
@@ -44,9 +42,4 @@ public class PessoaController {
 	public void BuscaPorId () { 	
 	}
 	
-
-    
-    
-
-
 }

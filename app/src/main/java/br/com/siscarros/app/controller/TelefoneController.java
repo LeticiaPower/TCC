@@ -20,28 +20,28 @@ public class TelefoneController {
     private TelefoneServiceInt telefoneService;
     
 	
-	@GetMapping(path="/CadastraTelefone")
+	@GetMapping(path="/cadastraTelefone")
 	public void CadastraTelefone () {	
 	}
 	
 	
-	@GetMapping(path="/ListaTelefone")
+	@GetMapping(path="/listaTelefone")
 	public List<Telefone> ListaTelefone () {
 			
 	return telefoneService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiTelefone")
+	@GetMapping(path="/excluiTelefone")
 	public void ExcluiTelefone () {
 		
 	}
-	@GetMapping(path="/AlterarTelefone")
+	@GetMapping(path="/alterarTelefone")
 	public void AlteraTelefone () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

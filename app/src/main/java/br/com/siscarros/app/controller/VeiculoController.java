@@ -17,26 +17,26 @@ public class VeiculoController {
 	@Autowired
     private VeiculoServiceInt veiculoService;
 	
-	@GetMapping(path="/CadastraVeiculo")
+	@GetMapping(path="/cadastraVeiculo")
 	public void CadastraVeiculo () {	
 	}
 	
-	@GetMapping(path="/ListaVeiculo")
+	@GetMapping(path="/listaVeiculo")
 	public List<Veiculo> ListaVeiculo () {
 			
 	return veiculoService.ListaTodos();		
 	}
 	
-	@GetMapping(path="/ExcluiVeiculo")
+	@GetMapping(path="/excluiVeiculo")
 	public void ExcluiVeiculo () {
 		
 	}
-	@GetMapping(path="/AlteraVeiculo")
+	@GetMapping(path="/alteraVeiculo")
 	public void AlteraVeiculo () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

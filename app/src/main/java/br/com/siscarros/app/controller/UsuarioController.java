@@ -19,7 +19,7 @@ public class UsuarioController {
     private UsuarioServiceInt usuarioService;
     
 	
-	@GetMapping(path="/CadastroUsuario")
+	@GetMapping(path="/cadastroUsuario")
 	public void TesteUsuario () {		
 	
 		
@@ -41,23 +41,23 @@ public class UsuarioController {
     
 	}
     
-	@GetMapping(path="/ListaUsuario")
+	@GetMapping(path="/listaUsuario")
 	public List<Usuario> ListaUsuario () {
 			
 	return usuarioService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiUsuario")
+	@GetMapping(path="/excluiUsuario")
 	public void ExcluiUsuario () {
 		
 	}
-	@GetMapping(path="/AlteraUsuario")
+	@GetMapping(path="/alteraUsuario")
 	public void AlteraUsuario () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

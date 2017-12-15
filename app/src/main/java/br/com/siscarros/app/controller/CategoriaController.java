@@ -19,28 +19,28 @@ public class CategoriaController {
 	@Autowired
     private CategoriaServiceInt categoriaService;
 	
-	@GetMapping(path="/CadastraCategoria")
+	@GetMapping(path="/cadastraCategoria")
 	public void CadastraCategoria () {	
 	}
 	
 	
-	@GetMapping(path="/ListaCategoria")
+	@GetMapping(path="/listaCategoria")
 	public List<Categoria> ListaCategoria () {
 			
 	return categoriaService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiCategoria")
+	@GetMapping(path="/excluiCategoria")
 	public void ExcluiCategoria () {
 		
 	}
-	@GetMapping(path="/AlterarCategoria")
+	@GetMapping(path="/alterarCategoria")
 	public void AlteraCategoria () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

@@ -21,7 +21,7 @@ public class VersaoController {
 	@Autowired
     private VersaoServiceInt versaoService;
 	
-	@GetMapping(path="/CadastraVersao")
+	@GetMapping(path="/cadastraVersao")
 	public void CadastraVersao () {	
 		
 		Versao v = new Versao();
@@ -32,24 +32,24 @@ public class VersaoController {
 		
 	}
 	
-	@GetMapping(path="/ListaVersao")
+	@GetMapping(path="/listaVersao")
 	public List<Versao> ListaVersao () {
 			
 	return versaoService.ListaTodos();		
 	}
 	
-	@GetMapping(path="/ExcluiVersao")
+	@GetMapping(path="/excluiVersao")
 	public void ExcluiVersao () {
 		
 		
 	}
-	@GetMapping(path="/AlteraVersao")
+	@GetMapping(path="/alteraVersao")
 	public void AlteraVersao () {
 	
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

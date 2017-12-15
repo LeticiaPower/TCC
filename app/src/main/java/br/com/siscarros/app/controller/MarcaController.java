@@ -19,28 +19,28 @@ public class MarcaController {
     private MarcaServiceInt marcaService;
 
 	
-	@GetMapping(path="/CadastraMarca")
+	@GetMapping(path="/cadastraMarca")
 	public void CadastraMarca () {	
 	}
 	
 	
-	@GetMapping(path="/ListaMarca")
+	@GetMapping(path="/listaMarca")
 	public List<Marca> ListaMarca () {
 			
 	return marcaService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiMarca")
+	@GetMapping(path="/excluiMarca")
 	public void ExcluiMarca () {
 		
 	}
-	@GetMapping(path="/AlterarMarca")
+	@GetMapping(path="/alterarMarca")
 	public void AlteraMarca () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

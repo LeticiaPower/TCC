@@ -18,28 +18,28 @@ class CorController {
 	@Autowired
     private CorServiceInt corService;
 	
-	@GetMapping(path="/CadastraCor")
+	@GetMapping(path="/cadastraCor")
 	public void CadastraCor () {	
 	}
 	
 	
-	@GetMapping(path="/ListaCor")
+	@GetMapping(path="/listaCor")
 	public List<Cor> ListaCor () {
 			
 	return corService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiCor")
+	@GetMapping(path="/excluiCor")
 	public void ExcluiCor () {
 		
 	}
-	@GetMapping(path="/AlterarCor")
+	@GetMapping(path="/alterarCor")
 	public void AlteraCor () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

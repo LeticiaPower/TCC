@@ -20,27 +20,27 @@ public class EmailController {
     private EmailServiceInt emailService;
     
 	
-	@GetMapping(path="/CadastraEmail")
+	@GetMapping(path="/cadastraEmail")
 	public void CadastraEmail () {	
 	}
 	
 	
-	@GetMapping(path="/ListaEmail")
+	@GetMapping(path="/listaEmail")
 	public List<Email> ListaEmail () {
 			
 	return emailService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiEmail")
+	@GetMapping(path="/excluiEmail")
 	public void ExcluiEmail () {
 		
 	}
-	@GetMapping(path="/AlterarEmail")
+	@GetMapping(path="/alterarEmail")
 	public void AlteraEmail () {
 		
 	}
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	

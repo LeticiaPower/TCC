@@ -19,29 +19,29 @@ public class DadosEmpresaController {
 	@Autowired
     private DadosEmpresaServiceInt dadosEmpresaService;
 	
-	@GetMapping(path="/CadastraDadosEmpresa")
+	@GetMapping(path="/cadastraDadosEmpresa")
 	public void CadastraDadosEmpresa () {	
 	
 	}
 	
 	
-	@GetMapping(path="/ListaDadosEmpresa")
+	@GetMapping(path="/listaDadosEmpresa")
 	public List<DadosEmpresa> ListaDadosEmpresa () {
 			
 	return dadosEmpresaService.ListaTodos();	
 		
 	}
 	
-	@GetMapping(path="/ExcluiDadosEmpresa")
+	@GetMapping(path="/excluiDadosEmpresa")
 	public void ExcluiDadosEmpresa () {
 		
 	}
-	@GetMapping(path="/AlterarDadosEmpresa")
+	@GetMapping(path="/alterarDadosEmpresa")
 	public void AlteraDadosEmpresa () {
 		
 	}
 	
-	@GetMapping(path="/BuscaPorId")
+	@GetMapping(path="/buscaPorId")
 	public void BuscaPorId () { 	
 	}
 	
