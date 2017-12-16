@@ -29,11 +29,11 @@ public class ImagemController {
 		
 	}
 	
-	@GetMapping(path="/excluiPessoa")
+	@GetMapping(path="/excluiImagem")
 	public void ExcluiPessoa () {
 		
 	}
-	@GetMapping(path="/alterarPessoa")
+	@GetMapping(path="/alterarImagem")
 	public void AlteraPessoa () {
 		
 	}

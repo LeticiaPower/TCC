@@ -23,8 +23,8 @@ public class Pessoa {
     @Temporal(TemporalType.DATE)
 	private Date dataNasc;
 	private String cpf;
-	private Integer telefone;
-	private Integer celular;
+	private String telefone;
+	private String celular;
 	private String logradouro;
 	private String cep;
 	private String complemento;
@@ -33,18 +33,12 @@ public class Pessoa {
 	private String estado;
 	private String bairro;
 	private String pais;
-	
-
-	
-	
-	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
 	public String getNome() {
 		return nome;
 	}
@@ -63,16 +57,16 @@ public class Pessoa {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public Integer getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(Integer telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	public Integer getCelular() {
+	public String getCelular() {
 		return celular;
 	}
-	public void setCelular(Integer celular) {
+	public void setCelular(String celular) {
 		this.celular = celular;
 	}
 	public String getLogradouro() {
@@ -124,11 +118,9 @@ public class Pessoa {
 		this.pais = pais;
 	}
 	
-	
-	
-	
-	
-	
-	
 
+	
+	
+	
+	
 }

@@ -3,8 +3,13 @@ package br.com.siscarros.app.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.siscarros.app.entities.Pessoa;
@@ -12,33 +17,18 @@ import br.com.siscarros.app.entities.Usuario;
 import br.com.siscarros.app.service.UsuarioServiceInt;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("usuario")
+@CrossOrigin("*")
 public class UsuarioController {
 	
 	@Autowired
     private UsuarioServiceInt usuarioService;
     
 	
-	@GetMapping(path="/cadastroUsuario")
-	public void TesteUsuario () {		
-	
-		
-	Pessoa p = new Pessoa();
-	p.setNome("Ana");
-	p.setCpf("025.265.265-42");
-	p.setCep("72.240-807");
-	p.setCelular(32536579);
-		
-		
-	Usuario u = new Usuario();
-	u.setLogin("LeticiaPower");
-	u.setSenha("lilica");
-	u.setStatus(false);
-    u.setPessoa(p);
+	@RequestMapping(value="/cadastroUsuario", method=RequestMethod.POST)
+	public void CadastraUsuario (@RequestBody Usuario usuario) {		
     
-    usuarioService.Cadastra(u);
-    
-    
+		usuarioService.Cadastra(usuario);
 	}
     
 	@GetMapping(path="/listaUsuario")

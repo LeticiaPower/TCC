@@ -1,5 +1,6 @@
 package br.com.siscarros.app.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -24,7 +25,7 @@ public class Usuario {
 	@OneToOne(cascade=CascadeType.ALL)
 	private Pessoa pessoa;
 	@ManyToMany
-	private List<Role> role;
+	private List<Role> role = new ArrayList<>();
 
 	public Long getId() {
 		return id;
