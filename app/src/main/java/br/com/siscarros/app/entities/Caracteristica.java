@@ -28,6 +28,10 @@ public class Caracteristica {
 	public void setNomeCaracteristica(String nomeCaracteristicas) {
 		this.nomeCaracteristicas = nomeCaracteristicas;
 	}
+
+
+
+	
 	
 	
 	
