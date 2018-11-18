@@ -7,38 +7,53 @@ import org.springframework.stereotype.Service;
 
 import br.com.siscarros.app.dao.PessoaDao;
 import br.com.siscarros.app.entities.Pessoa;
+import br.com.siscarros.app.entities.converter.PessoaConverter;
+import br.com.siscarros.app.entities.dto.PessoaDTO;
 
 @Service
-public class PessoaService implements PessoaServiceInt{
+public class PessoaService implements PessoaServiceInt {
 	
 	@Autowired
 	private PessoaDao pessoaDao;
+	
+	@Autowired
+	private PessoaConverter pessoaConverter; 
 
 	@Override
-	public Pessoa Cadastra(Pessoa pessoa) {
-		return pessoaDao.save(pessoa);
+	public PessoaDTO Cadastra(PessoaDTO pessoaDTO) {
+		Pessoa pessoa = pessoaConverter.convertToEntity(pessoaDTO);
+		Pessoa retorno = pessoaDao.save(pessoa);
+		return pessoaConverter.convertToDTO(retorno);
 	}
 
 	@Override
-	public Pessoa Altera(Pessoa pessoa) {
-		return pessoaDao.save(pessoa);
+	public PessoaDTO Altera(PessoaDTO pessoaDTO) {
+		Pessoa pessoa = pessoaConverter.convertToEntity(pessoaDTO);
+		Pessoa retorno = pessoaDao.save(pessoa);
+		return pessoaConverter.convertToDTO(retorno);
 	}
 
 	@Override
 	public void Deleta(Long id) {
-
+		Pessoa pessoa = pessoaDao.findOne(id);
+		pessoaDao.delete(pessoa);
 		
 	}
 
 	@Override
-	public List<Pessoa> ListaTodos() {
-		return pessoaDao.findAll();
+	public List<PessoaDTO> ListaTodos() {
+		List<Pessoa> pessoas = pessoaDao.findAll();
+		return pessoaConverter.convertToDTO(pessoas);
 	}
 
 	@Override
-	public Pessoa BuscaPorId(Long id) {
-		return pessoaDao.findOne(id);
+	public PessoaDTO BuscaPorId(Long id) {
+		Pessoa pessoa = pessoaDao.findOne(id);
+		return pessoaConverter.convertToDTO(pessoa);
 	}
 
 	
+
+
 }
+

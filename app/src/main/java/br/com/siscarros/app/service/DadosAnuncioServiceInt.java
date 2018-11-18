@@ -1,9 +1,10 @@
 package br.com.siscarros.app.service;
 
 
-import br.com.siscarros.app.entities.DadosAnuncio;
 
-public interface DadosAnuncioServiceInt extends CrudService<DadosAnuncio, Long>{
+import br.com.siscarros.app.entities.dto.DadosAnuncioDTO;
+
+public interface DadosAnuncioServiceInt extends CrudService<DadosAnuncioDTO, Long>{
 	
 
 	

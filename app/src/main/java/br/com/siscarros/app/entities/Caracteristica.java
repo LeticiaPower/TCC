@@ -22,10 +22,10 @@ public class Caracteristica {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNomeCaracteristicas() {
+	public String getNomeCaracteristica() {
 		return nomeCaracteristicas;
 	}
-	public void setNomeCaracteristicas(String nomeCaracteristicas) {
+	public void setNomeCaracteristica(String nomeCaracteristicas) {
 		this.nomeCaracteristicas = nomeCaracteristicas;
 	}
 	

@@ -1,10 +1,9 @@
 package br.com.siscarros.app.service;
 
 
+import br.com.siscarros.app.entities.dto.MarcaDTO;
 
-import br.com.siscarros.app.entities.Marca;
-
-public interface MarcaServiceInt extends CrudService<Marca, Long>{
+public interface MarcaServiceInt extends CrudService<MarcaDTO, Long>{
 	
 
 }

@@ -1,8 +1,8 @@
 package br.com.siscarros.app.service;
 
-import br.com.siscarros.app.entities.Imagem;
+import br.com.siscarros.app.entities.dto.ImagemDTO;
 
-public interface ImagemServiceInt extends CrudService<Imagem, Long>{
+public interface ImagemServiceInt extends CrudService<ImagemDTO, Long>{
 	
 
 }

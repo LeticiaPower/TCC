@@ -7,38 +7,52 @@ import org.springframework.stereotype.Service;
 
 import br.com.siscarros.app.dao.DadosAnuncioDao;
 import br.com.siscarros.app.entities.DadosAnuncio;
+import br.com.siscarros.app.entities.converter.DadosAnuncioConverter;
+import br.com.siscarros.app.entities.dto.DadosAnuncioDTO;
 
 @Service
 public class DadosAnuncioService implements DadosAnuncioServiceInt {
 	
 	@Autowired
 	private DadosAnuncioDao dadosAnuncioDao;
+	
+	@Autowired
+	private DadosAnuncioConverter dadosAnuncioConverter;
 
 	@Override
-	public DadosAnuncio Cadastra(DadosAnuncio dadosAnuncio) {
-		return dadosAnuncioDao.save(dadosAnuncio);
+	public DadosAnuncioDTO Cadastra(DadosAnuncioDTO dadosAnuncioDTO) {
+		DadosAnuncio dadosAnuncio = dadosAnuncioConverter.convertToEntity(dadosAnuncioDTO);
+		DadosAnuncio retorno = dadosAnuncioDao.save(dadosAnuncio);
+		return dadosAnuncioConverter.convertToDTO(retorno);
 	}
 
 	@Override
-	public DadosAnuncio Altera(DadosAnuncio dadosAnuncio) {
-		return dadosAnuncioDao.save(dadosAnuncio);
+	public DadosAnuncioDTO Altera(DadosAnuncioDTO dadosAnuncioDTO) {
+		DadosAnuncio dadosAnuncio = dadosAnuncioConverter.convertToEntity(dadosAnuncioDTO);
+		DadosAnuncio retorno = dadosAnuncioDao.save(dadosAnuncio);
+		return dadosAnuncioConverter.convertToDTO(retorno);
 	}
 
 	@Override
 	public void Deleta(Long id) {
+		DadosAnuncio dadosAnuncio = dadosAnuncioDao.findOne(id);
+		dadosAnuncioDao.delete(dadosAnuncio);
 		
 	}
 
 	@Override
-	public List<DadosAnuncio> ListaTodos() {
-		return dadosAnuncioDao.findAll();
+	public List<DadosAnuncioDTO> ListaTodos() {
+		List<DadosAnuncio> anuncios = dadosAnuncioDao.findAll();
+		return dadosAnuncioConverter.convertToDTO(anuncios);
 	}
 
 	@Override
-	public DadosAnuncio BuscaPorId(Long id) {
-		return dadosAnuncioDao.findOne(id);
+	public DadosAnuncioDTO BuscaPorId(Long id) {
+		DadosAnuncio dadosAnuncio = dadosAnuncioDao.findOne(id);
+		return dadosAnuncioConverter.convertToDTO(dadosAnuncio);
 	}
 
+	
 
 
 }

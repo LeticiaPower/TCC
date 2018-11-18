@@ -33,6 +33,15 @@ public class Pessoa {
 	private String estado;
 	private String bairro;
 	private String pais;
+	private DadosEmpresa dadosEmpresa;
+	
+	
+	public DadosEmpresa getDadosEmpresa() {
+		return dadosEmpresa;
+	}
+	public void setDadosEmpresa(DadosEmpresa dadosEmpresa) {
+		this.dadosEmpresa = dadosEmpresa;
+	}
 	public Long getId() {
 		return id;
 	}

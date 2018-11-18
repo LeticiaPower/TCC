@@ -1,9 +1,10 @@
 package br.com.siscarros.app.service;
 
 
-import br.com.siscarros.app.entities.Caracteristica;
 
-public interface CaracteristicaServiceInt extends CrudService<Caracteristica, Long> {
+import br.com.siscarros.app.entities.dto.CaracteristicaDTO;
+
+public interface CaracteristicaServiceInt extends CrudService<CaracteristicaDTO, Long> {
 	
 
 

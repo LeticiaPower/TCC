@@ -7,37 +7,52 @@ import org.springframework.stereotype.Service;
 
 import br.com.siscarros.app.dao.CorDao;
 import br.com.siscarros.app.entities.Cor;
+import br.com.siscarros.app.entities.converter.CorConverter;
+import br.com.siscarros.app.entities.dto.CorDTO;
 
 @Service
 public class CorService implements CorServiceInt{
 	
 	@Autowired
 	private CorDao corDao;
+	
+	@Autowired
+	private CorConverter corConverter;
 
 	@Override
-	public Cor Cadastra(Cor cor) {
-		return corDao.save(cor);
+	public CorDTO Cadastra(CorDTO corDTO) {
+		Cor cor = corConverter.convertToEntity(corDTO);
+		Cor retorno = corDao.save(cor);
+		return corConverter.convertToDTO(retorno);
 	}
 
 	@Override
-	public Cor Altera(Cor cor) {
-		return corDao.save(cor);
+	public CorDTO Altera(CorDTO corDTO) {
+		Cor cor = corConverter.convertToEntity(corDTO);
+		Cor retorno = corDao.save(cor);
+		return corConverter.convertToDTO(retorno);
 	}
 
 	@Override
 	public void Deleta(Long id) {
+		Cor cor = corDao.findOne(id);
+		corDao.delete(cor);
 		
 	}
 
 	@Override
-	public List<Cor> ListaTodos() {
-		return corDao.findAll();
+	public List<CorDTO> ListaTodos() {
+		List<Cor> cores = corDao.findAll();
+		return corConverter.convertToDTO(cores);
 	}
 
 	@Override
-	public Cor BuscaPorId(Long id) {
-		return corDao.findOne(id);
+	public CorDTO BuscaPorId(Long id) {
+		Cor cor = corDao.findOne(id);
+		return corConverter.convertToDTO(cor);
 	}
+
+
 
 	
 

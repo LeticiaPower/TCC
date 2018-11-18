@@ -20,11 +20,20 @@ public class DadosAnuncio {
 	private String titulo;
 	private Date dataDoCadastro;
 	private Date dataUpdate;
-	private Date dataExpirecao;
+	private Date dataExpiracao;
+	private String descricao;
 	@ManyToOne
 	private Veiculo veiculo;
+	@ManyToOne
+	private Peca peca;
 	
 	
+	public Peca getPeca() {
+		return peca;
+	}
+	public void setPeca(Peca peca) {
+		this.peca = peca;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -50,16 +59,22 @@ public class DadosAnuncio {
 		this.dataUpdate = dataUpdate;
 	}
 	public Date getDataExpirecao() {
-		return dataExpirecao;
+		return dataExpiracao;
 	}
 	public void setDataExpirecao(Date dataExpirecao) {
-		this.dataExpirecao = dataExpirecao;
+		this.dataExpiracao = dataExpirecao;
 	}
 	public Veiculo getVeiculo() {
 		return veiculo;
 	}
 	public void setVeiculo(Veiculo veiculo) {
 		this.veiculo = veiculo;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 	
 	

@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -23,9 +24,9 @@ public class Veiculo {
 	private String combustivel;
 	private Integer portas;
 	private String cambio;
-	private Double potencia;
+	private Double cilindrada;
 	private Integer kilometragem;
-	private String descricao;
+	private String detalhesVeiculo;
 	private String placa;
 	private Boolean visibilidadePlaca;
 	@ManyToOne
@@ -44,9 +45,27 @@ public class Veiculo {
 	private DadosAnuncio dadosAnuncio;
 	@ManyToMany
 	private List<Caracteristica> caracteristicas;
-	
-	
-	
+	@OneToMany
+	private List<Imagem> imagens;
+		
+	public Double getCilindrada() {
+		return cilindrada;
+	}
+	public void setCilindrada(Double cilindrada) {
+		this.cilindrada = cilindrada;
+	}
+	public String getDetalhesVeiculo() {
+		return detalhesVeiculo;
+	}
+	public void setDetalhesVeiculo(String detalhesVeiculo) {
+		this.detalhesVeiculo = detalhesVeiculo;
+	}
+	public List<Imagem> getImagens() {
+		return imagens;
+	}
+	public void setImagens(List<Imagem> imagens) {
+		this.imagens = imagens;
+	}
 	public DadosAnuncio getDadosAnuncio() {
 		return dadosAnuncio;
 	}
@@ -96,10 +115,10 @@ public class Veiculo {
 		this.cambio = cambio;
 	}
 	public Double getPotencia() {
-		return potencia;
+		return cilindrada;
 	}
 	public void setPotencia(Double potencia) {
-		this.potencia = potencia;
+		this.cilindrada = potencia;
 	}
 	public Integer getKilometragem() {
 		return kilometragem;
@@ -108,10 +127,10 @@ public class Veiculo {
 		this.kilometragem = kilometragem;
 	}
 	public String getDescricao() {
-		return descricao;
+		return detalhesVeiculo;
 	}
 	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+		this.detalhesVeiculo = descricao;
 	}
 	public String getPlaca() {
 		return placa;

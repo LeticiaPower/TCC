@@ -7,38 +7,56 @@ import org.springframework.stereotype.Service;
 
 import br.com.siscarros.app.dao.VeiculoDao;
 import br.com.siscarros.app.entities.Veiculo;
-
+import br.com.siscarros.app.entities.Veiculo;
+import br.com.siscarros.app.entities.converter.VeiculoConverter;
+import br.com.siscarros.app.entities.converter.VeiculoConverter;
+import br.com.siscarros.app.entities.dto.VeiculoDTO;
+import br.com.siscarros.app.entities.dto.VeiculoDTO;
 
 @Service
-public class VeiculoService implements VeiculoServiceInt{
+public class VeiculoService implements VeiculoServiceInt {
 	
 	@Autowired
 	private VeiculoDao veiculoDao;
+	
+	@Autowired
+	private VeiculoConverter veiculoConverter;
 
 	@Override
-	public Veiculo Cadastra(Veiculo veiculo) {
-		return veiculoDao.save(veiculo);
+	public VeiculoDTO Cadastra(VeiculoDTO veiculoDTO) {
+		Veiculo veiculo = veiculoConverter.convertToEntity(veiculoDTO);
+		Veiculo retorno = veiculoDao.save(veiculo);
+		return veiculoConverter.convertToDTO(retorno);
 	}
 
 	@Override
-	public Veiculo Altera(Veiculo veiculo) {
-		return veiculoDao.save(veiculo);
+	public VeiculoDTO Altera(VeiculoDTO veiculoDTO) {
+		Veiculo veiculo = veiculoConverter.convertToEntity(veiculoDTO);
+		Veiculo retorno = veiculoDao.save(veiculo);
+		return veiculoConverter.convertToDTO(retorno);
 	}
 
 	@Override
 	public void Deleta(Long id) {
+		Veiculo veiculo = veiculoDao.findOne(id);
+		veiculoDao.delete(veiculo);
 		
 	}
 
 	@Override
-	public List<Veiculo> ListaTodos() {
-		return veiculoDao.findAll();
+	public List<VeiculoDTO> ListaTodos() {
+		List<Veiculo> veiculos = veiculoDao.findAll();
+		return veiculoConverter.convertToDTO(veiculos);
 	}
 
 	@Override
-	public Veiculo BuscaPorId(Long id) {
-		return veiculoDao.findOne(id);
+	public VeiculoDTO BuscaPorId(Long id) {
+		Veiculo veiculo = veiculoDao.findOne(id);
+		return veiculoConverter.convertToDTO(veiculo);
 	}
 
 	
+
+
 }
+

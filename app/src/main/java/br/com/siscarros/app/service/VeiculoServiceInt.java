@@ -1,8 +1,8 @@
 package br.com.siscarros.app.service;
 
-import br.com.siscarros.app.entities.Veiculo;
+import br.com.siscarros.app.entities.dto.VeiculoDTO;
 
-public interface VeiculoServiceInt extends CrudService<Veiculo, Long>{
+public interface VeiculoServiceInt extends CrudService<VeiculoDTO, Long>{
 	
 
 

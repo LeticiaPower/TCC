@@ -1,9 +1,8 @@
 package br.com.siscarros.app.service;
 
 
+import br.com.siscarros.app.entities.dto.EmailDTO;
 
-import br.com.siscarros.app.entities.Email;
-
-public interface EmailServiceInt extends CrudService<Email, Long> {
+public interface EmailServiceInt extends CrudService<EmailDTO, Long> {
 	
 }
