@@ -53,6 +53,11 @@ public class UsuarioService implements UsuarioServiceInt {
 		return usuarioConverter.convertToDTO(usuario);
 	}
 
+	@Override
+	public UsuarioDTO logar(UsuarioDTO usuario) {
+		return usuarioConverter.convertToDTO(usuarioDao.logar(usuario.getLogin(), usuario.getSenha()));
+	}
+
 	
 
 

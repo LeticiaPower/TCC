@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +16,8 @@ public class DadosEmpresa {
 	private Long id;
 	private String nomeFantasia;
 	private String razaoSocial;
+	@OneToOne
+	private Pessoa pessoa;
 	
 	public Long getId() {
 		return id;

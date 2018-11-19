@@ -9,7 +9,7 @@ public class PessoaDTO {
 	
 	private Long id;
 	private String nome;
-	private Date dataNasc;
+	private String dataNasc;
 	private String cpf;
 	private String telefone;
 	private String celular;
@@ -21,16 +21,7 @@ public class PessoaDTO {
 	private String estado;
 	private String bairro;
 	private String pais;
-	private DadosEmpresa dadosEmpresa;
 	
-	
-	
-	public DadosEmpresa getDadosEmpresa() {
-		return dadosEmpresa;
-	}
-	public void setDadosEmpresa(DadosEmpresa dadosEmpresa) {
-		this.dadosEmpresa = dadosEmpresa;
-	}
 	public Long getId() {
 		return id;
 	}
@@ -43,10 +34,11 @@ public class PessoaDTO {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Date getDataNasc() {
+	
+	public String getDataNasc() {
 		return dataNasc;
 	}
-	public void setDataNasc(Date dataNasc) {
+	public void setDataNasc(String dataNasc) {
 		this.dataNasc = dataNasc;
 	}
 	public String getCpf() {

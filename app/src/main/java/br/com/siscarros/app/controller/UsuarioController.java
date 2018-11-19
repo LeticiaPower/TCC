@@ -27,10 +27,15 @@ public class UsuarioController {
     private UsuarioServiceInt usuarioService;
     
 	
-	@RequestMapping(value="/cadastroUsuario", method=RequestMethod.POST)
+	@PostMapping(value="/cadastroUsuario")
 	public void CadastraUsuario (@RequestBody UsuarioDTO usuarioDTO) {		
-    
 		usuarioService.Cadastra(usuarioDTO);
+	}
+	
+	@PostMapping(value="/logar")
+	public UsuarioDTO logar (@RequestBody UsuarioDTO usuarioDTO) {		
+		return usuarioService.logar(usuarioDTO);
+		
 	}
     
 	@GetMapping(path="/listaUsuario")
